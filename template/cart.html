@@ -1,0 +1,342 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	
+<!-- Mirrored from templatation.net/site-templates/justcakes/version4/layout4/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 09:31:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+		<title>Cart - Just the best Cakes</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width">
+		<script type="text/javascript" src="{% static 'javascript/head.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/screen.css' %}" media="screen">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/print.css' %}" media="print">
+		<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+<script type="text/javascript" src="{% static 'jscript_styleswitcher.js' %}"></script>
+<link rel="stylesheet" href="{% static 'styleswitcher.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Skins Color FOR DEMO WEBSITE -->
+<link rel="alternate stylesheet" href="{% static 'styles-orange/screen.css' %}" title="style-orange" />
+<link rel="alternate stylesheet" href="{% static 'styles-blue/screen.css' %}" title="style-blue" />
+<link rel="alternate stylesheet" href="{% static 'styles-pink/screen.css' %}" title="style-pink" />
+<link rel="alternate stylesheet" href="{% static 'styles-purple/screen.css' %}" title="style-purple" />
+<link rel="alternate stylesheet" href="{% static 'styles-green/screen.css' %}" title="style-green" />
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- EOF OF DEMO WEBSITE CODE -->
+<!-------------------------------------------------------------------/
+EOF Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+	   
+<div class="switcher" style="left: -130px;">	<h2>Colors<a href="#"></a></h2>
+<div class="switcher-content"> 
+<div class="switcher-box">
+            <a title="style-blue" class="styleswitch blue" rel="style-blue"></a>
+            <a title="style-pink" class="styleswitch pink" rel="style-pink"></a>
+            <a title="style-purple" class="styleswitch purple" rel="style-purple"></a>
+            <a title="style-green" class="styleswitch green" rel="style-green"></a>
+            <a title="style-orange" class="styleswitch orange" rel="style-orange"></a>
+		</div><!-- End switcher-box -->
+        <div class="clear"></div>
+        <!-- cols -->
+		<ul>
+			<li><a href="{% url 'index' %}">Home</a></li>
+			
+			
+			</li>
+			<li><a accesskey="2" href="{% url 'product' %}">Cakes and other</a> <em>(2)</em></li>
+			<li><a accesskey="3" href="{% url 'register' %}">register</a> <em>(3)</em></li>
+			
+			<li><a accesskey="5" href="{% url 'login' %}">login</a> <em>(5)</em>
+				
+			</li>
+			<li><a accesskey="6" href="{% url 'cnt' %}">Contact</a> <em>(6)</em></li>
+		</ul>
+
+    </div><!-- End content -->
+</div>
+<!-------------------------------------------------------------------/
+Color switcher ends here
+<!------------------------------------------------------------------->		   
+
+		<div id="root">
+			<!-- Header start -->
+			<header id="top" class="c">
+				<h1><a href="index.html" accesskey="h">Just the best Cakes</a></h1>
+				<nav id="skip">
+					<ul>
+						<li><a href="#nav" accesskey="n">Skip to navigation (n)</a></li>
+						<li><a href="#content" accesskey="c">Skip to content (c)</a></li>
+						<li><a href="#footer" accesskey="f">Skip to footer (f)</a></li>
+					</ul>
+				</nav>
+				<!-- Navigation start -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						
+						
+						</li>
+						{% if user.is_authenticated %}
+						<li><a accesskey="3" href="{% url 'index' %}">{{ user.username }}&nbsp hi</a> <em>(3)</em></li>
+						<li><a href="/logout">logout </a>
+						{% else %}
+			<li><a accesskey="3" href="/register">register</a> <em>(3)</em></li>
+			
+			<li><a accesskey="5" href="/login">login</a> <em>(5)</em>
+				{% endif %}
+							
+						</li>
+						<li><a accesskey="6" href="{% url 'cnt' %}">Contact</a> <em>(6)</em></li>
+					</ul>
+				</nav>
+				<div id="featured">
+					<div><figure><img src="{% static 'temp/placeholder-o.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o-1.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o-1.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+				</div>
+			</header>  
+		
+				{% if user.is_superuser %}
+<h1 class="jumbotron my-3">YOU ARE NOT ALLOWED HERE</h1>
+{% else %}
+				
+					<fieldset>
+						<legend>Search</legend>
+						<p>
+							<label for="sa">Search products</label>
+							<input type="text" id="sa" name="sa" required>
+							<button type="submit">Submit</button>
+						</p>
+					</fieldset>
+				
+			</nav>
+			{% if items|length == 0 %}
+            <div class="container-fluid">
+                <div class="jumbotron alert alert-danger">
+                    &times; Your Shopping Cart is empty !!! 
+                </div>
+            </div>
+        {% else %}                  
+			<!-- Content area start -->
+			<section id="content">
+				<div class="cols-a">
+					
+						<fieldset>
+							{% if status %}
+							<h1>{{status}}</h1>
+						{% else %}
+							<h1>My Cart ({{items|length}})</h1>
+						{% endif %}
+							<h2 class="header-b">Home / Shop / My Cart</h2>
+							{% if user.is_authenticated %}
+							{% if msz %}
+					   <div class="{{cls}} mt-3">{{msz}}</div>
+				   {% endif %}
+							<table class="table-b">
+								<tr>                    	                                                    	        	           
+									
+									<th scope="col">Image</th>
+									<th scope="col">Product</th>
+									<th scope="col">Price</th>
+									<th scope="col">Delete</th>
+									
+									
+								</tr>
+								{% for i in items %}
+								<tr id="row{{i.id}}">
+									<td><img src="{{ i.product.image.url }}" alt="Placeholder" width="62" height="40"></td>
+									<td><a href="{% url 'product' %}">{{i.product.name}}</a></td>
+									<td class="price">{{i.product.price}}</td>
+									<td>
+										<div class="row">
+											<div class="col-md-3">
+												<i class="fa fa-plus bg-success p-1 text-light rounded-circle" onclick="change_quan('{{i.id}}','plus')"></i>
+											</div> 
+											<div class="col-md-6">
+												<input type="number" value="{{i.quantity}}" class="form-control" id="cart{{i.id}}">
+											</div>
+											<div class="col-md-3">
+												<i class="fa fa-minus bg-danger p-1 text-light rounded-circle" onclick="change_quan('{{i.id}}','minus')"></i>
+											</div>
+										</div>
+										 
+									</td>
+									
+										
+								</tr>
+								{% endfor %}
+								<tr>
+									<td colspan="6" class="a">
+										<a href="{% url 'process_payment' %}">
+										<button type="submit" id="btamt">Check out</button></a>
+									</td>
+								</tr>
+							</table>
+							<table class="table-c">
+								<tr>
+									<th scope="row">Cart Subtotal:</th>
+									<td class="disc"></td>
+								</tr>
+								<tr>
+									<th scope="row">Shipping:</th>
+									<td id="quantity"></td>
+								</tr>
+								<tr>
+									<th scope="row">Total:</th>
+									<td id="grand_total"></td>
+								</tr>
+							</table>	{% endif %}
+							
+						</fieldset>
+					
+
+					{% endif %}
+				   {% endif %}
+					<aside>
+						<h3>Featured Products:</h3>
+						<ul class="list-d">
+							<li><a href="index.html">Little Chocoburst pudding <span>price: 200</span> <img src="{% static 'temp/placeholder-j-1.png' %}" alt="Placeholder" width="79" height="47"></a></li>
+							<li><a href="index.html">Little Chocolava bomb <span>price: 120</span> <img src="{% static 'temp/placeholder-j.png' %}" alt="Placeholder" width="79" height="47"></a></li>
+							<li><a href="index.html">Little Strowberie Cupcake <span>price: 90</span> <img src="{% static 'temp/placeholder-j-1.png' %}" alt="Placeholder" width="79" height="47"></a></li>
+						</ul>
+					</aside>
+				</div>
+			</section>
+			<!-- Content area end -->
+			<!-- Footer starts -->
+			<footer id="footer">
+				<article class="double-a">
+					<div>
+						<h3>Free delivery! (30 minutes)</h3>
+						<figure><img src="{% static 'images/icons/a.png' %}" alt="Truck" width="59" height="59"></figure>
+						<p>'Just the best CAKES' is happy to assist you with your home delivery. Every time you order, you get a hot/cold and fresh product delivered at your doorstep in less than thirty minutes.</p>
+					</div>
+					<div>
+						<h3>Free gift wrap!</h3>
+						<figure><img src="{% static 'images/icons/b.png' %}" alt="Gift" width="59" height="59"></figure>
+						<p>Free Gift Wrap on all items by select sellers too when Fulfilled by 'Just the best CAKES'. See how to have your item gift wrapped free of charge and the Terms & Conditions of the offer.</p>
+					</div>
+				</article>
+				<article id="info">
+					<div class="vcard">
+						<h3>Contact info:</h3>
+						<h4 class="fn org">Just the best CAKES</h4>
+						<p class="tel">+91 8188929736</p>
+						<p><a class="email">siddharthapandey548@gmail.com</a></p>
+						<p class="adr"><span class="locality">Lucknow</span>, <span class="street-address">Kaiserbagh</span></p>
+					</div>
+					<div>
+						<h3>Work time:</h3>
+						<ul>
+							<li>Monday - Friday: 8 AM - 8 PM</li>
+							<li>Saturday: 9 AM - 4 PM</li>
+							<li>Sunday: closed :(</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Become our friend:</h3>
+						<ul class="social-a">
+							<li class="fb"><a rel="external" href="index.html">follow us on Facebook</a></li>
+							<li class="tw"><a rel="external" href="index.html">follow us on Twitter</a></li>
+							<li class="gp"><a rel="external" href="index.html">follow us on Google</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Blog - our secret recipes:</h3>
+						<ul class="list-a">
+							<li><a href="index.html">Cake with chocolate &amp; strawberries</a></li>
+							<li><a href="index.html">Simple vanilla cake</a></li>
+							<li><a href="index.html">Unusual dark pancakes</a></li>
+						</ul>
+					</div>
+				</article>
+				<nav>
+				
+					<p>copyright: <a href="index.html">SidsBakery.com</a> <span class="date">2012</span></p>
+				</nav>
+			</footer>
+		</div>
+	
+		
+        <script>
+            function grandTotal(){
+                $.ajax({
+                    url:"{% url 'get_cart_data' %}",
+                    type:'get',
+                    success:function(data){
+                        p = Math.round(100-((data.offer/data.total)*100),2)
+                        save = data.total-data.offer;
+                        
+                        $("#disc").html("&#8377;"+data.offer);
+                        $("#offer").html("&#8377;"+save+" <span class='text-success'>("+p+"%)</span>");
+                         $("#quantity").html(data.quan+" Items");
+                         $("#grand_total").html("&#8377;"+data.offer);
+                          $("#btamt").html("&#8377;"+data.offer);
+        
+                    }
+                })
+            }
+            grandTotal();
+			function change_quan(id,action){
+        let old = $("#cart"+id).val();
+         
+        quan = 0
+        if(action=="plus"){
+            quan += parseInt(old)+1
+        }else{
+            quan += parseInt(old)-1
+        }
+        
+
+
+        $("#cart"+id).val(quan);
+        
+        $.ajax({
+            url:"{% url 'change_quan' %}",
+            type:"get",
+            data:{cid:id, quantity:quan},
+            success:function(data){
+                grandTotal();
+              if(data==0){
+                 remove_cart(id);
+              }
+            }
+        })
+    }
+
+    function remove_cart(id){
+        $.ajax({
+            url:"{% url 'change_quan' %}",
+            data:{delete_cart:id},
+            success:function(data){
+                 grandTotal();
+                 $("#row"+id).hide();
+            }
+
+        })
+    }
+        
+           
+        </script>
+        
+
+		
+	</body>
+
+<!-- Mirrored from templatation.net/site-templates/justcakes/version4/layout4/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 09:31:45 GMT -->
+</html>

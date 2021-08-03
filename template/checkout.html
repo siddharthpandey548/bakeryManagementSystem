@@ -1,0 +1,246 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	
+<!-- Mirrored from templatation.net/site-templates/justcakes/version4/layout4/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 09:31:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+		<title>Cart - Just the best Cakes</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width">
+		<script type="text/javascript" src="{% static 'javascript/head.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/screen.css' %}" media="screen">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/print.css' %}" media="print">
+		<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+<script type="text/javascript" src="{% static 'jscript_styleswitcher.js' %}"></script>
+<link rel="stylesheet" href="{% static 'styleswitcher.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Skins Color FOR DEMO WEBSITE -->
+<link rel="alternate stylesheet" href="{% static 'styles-orange/screen.css' %}" title="style-orange" />
+<link rel="alternate stylesheet" href="{% static 'styles-blue/screen.css' %}" title="style-blue" />
+<link rel="alternate stylesheet" href="{% static 'styles-pink/screen.css' %}" title="style-pink" />
+<link rel="alternate stylesheet" href="{% static 'styles-purple/screen.css' %}" title="style-purple" />
+<link rel="alternate stylesheet" href="{% static 'styles-green/screen.css' %}" title="style-green" />
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- EOF OF DEMO WEBSITE CODE -->
+	</head>
+	<body>
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+	   
+<div class="switcher" style="left: -130px;">	<h2>Colors<a href="#"></a></h2>
+<div class="switcher-content"> 
+<div class="switcher-box">
+            <a title="style-blue" class="styleswitch blue" rel="style-blue"></a>
+            <a title="style-pink" class="styleswitch pink" rel="style-pink"></a>
+            <a title="style-purple" class="styleswitch purple" rel="style-purple"></a>
+            <a title="style-green" class="styleswitch green" rel="style-green"></a>
+            <a title="style-orange" class="styleswitch orange" rel="style-orange"></a>
+		</div><!-- End switcher-box -->
+        <div class="clear"></div>
+        <!-- cols -->
+        <ul class="cols">
+        	<li><a href="http://templatation.com/Site-templates/Justcakes/version4/layout1/" class="boxed-layout">Layout 1</a></li>
+        	<li><a href="http://templatation.com/Site-templates/Justcakes/version4/layout2/" class="boxed-layout">Layout 2</a></li>
+        	<li><a href="http://templatation.com/Site-templates/Justcakes/version4/layout3/" class="boxed-layout">Layout 3</a></li>
+        	<li><a href="http://templatation.com/Site-templates/Justcakes/version4/layout4/" class="boxed-layout">Layout 4</a></li>
+        </ul>
+
+    </div><!-- End content -->
+</div>
+<!-------------------------------------------------------------------/
+Color switcher ends here
+<!------------------------------------------------------------------->		   
+		<div id="root">
+			<!-- Header start -->
+			<header id="top" class="c">
+				<h1><a href="{% url 'index' %}" accesskey="h">VINATGE MEACHINE</a></h1>
+				<nav id="skip">
+					
+				</nav>
+				<!-- Navigation start -->
+				<nav id="nav">
+						<ul>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							
+							
+							</li>
+							<li><a accesskey="2" href="{% url 'product' %}">Cakes and other</a> <em>(2)</em></li>
+
+
+							{% if user.is_authenticated %}
+										<li><a accesskey="3" href="{% url 'index' %}">{{ user.username }}&nbsp hi</a> <em>(3)</em></li>
+										<li><a href="/logout">logout </a>
+										{% else %}
+							
+							
+							<li><a accesskey="5" href="/login">login</a> <em>(5)</em>
+								{% endif %}	
+								
+							</li>
+							<li><a accesskey="6" href="{% url 'cnt' %}">Contact</a> <em>(6)</em></li>
+						</ul>
+					
+				</nav>
+				
+			</header>  
+			<nav id="cart">
+				<ul>
+					{% if user.is_authenticated %}
+										<li><a accesskey="3" href="{% url 'index' %}">{{ user.username }}&nbsp hi</a> <em></em></li>
+										<li><a href="/logout">logout </a>
+										{% else %}
+							
+							
+							<li><a accesskey="5" href="/login">login</a> <em>(5)</em>
+								{% endif %}	
+					<li><a href="index.html">My account</a></li>
+					<li class="a"><a href="index.html">20,50</a></li>
+				</ul>
+				<form action="https://templatation.net/site-templates/justcakes/version4/layout4/" method="post" id="search">
+					<fieldset>
+						<legend>Search</legend>
+						<p>
+							<label for="sa">Search products</label>
+							<input type="text" id="sa" name="sa" required>
+							<button type="submit">Submit</button>
+						</p>
+					</fieldset>
+				</form>
+			</nav>                  
+			<!-- Content area start -->
+			<section id="content">
+				<div class="cols-a">
+					<div>
+						<h3 class="mb-a">Already registered? Click here to login</h3>
+						<p>Already registered? <a href="index.html">Click here to login</a></p>
+						<form action="https://templatation.net/site-templates/justcakes/version4/layout4/" method="post" class="form-b">
+							<fieldset>
+								<div class="double-c">
+									<div>
+										
+										<p>
+											<label for="fba">First Name</label>
+											<input type="text" id="fba" name="fba" required>
+										</p>
+										<p>
+											<label for="fbb">Last Name</label>
+											<input type="text" id="fbb" name="fbb" required>
+										</p>
+										<p>
+											<label for="fbc">Adress</label>
+											<input type="text" id="fbc" name="fbc" required>
+										</p>
+										<p>
+											<label for="fbd">City</label>
+											<input type="text" id="fbd" name="fbd" required>
+										</p>
+										<p>
+											<label for="fbe">Phone</label>
+											<input type="tel" id="fbe" name="fbe" required>
+										</p>
+										<p>
+											<label for="fbf">Notice</label>
+											<input type="text" id="fbf" name="fbf">
+										</p>
+									</div>
+									
+									<div>
+										<h3>Another adress for deliver:</h3>
+										<p>
+											<label for="fbg">Adress</label>
+											<input type="text" id="fbg" name="fbg" required>
+										</p>
+										<p class="error">
+											<label for="fbh">Email</label>
+											<input type="text" id="fbh" name="fbh" required>
+										</p>
+										<aside>
+								</div>
+								</fieldset></form></div>
+								<div class="col-md-4  text-center"  >
+									<h1 class="text-warning">Click Here to Continue</h1>
+									{{form.render}}
+								</div>
+								
+					
+						
+						
+			<!-- Content area end -->
+			<!-- Footer starts -->
+			<footer id="footer">
+				<article class="double-a">
+					<div>
+						<h3>Free delivery! (20 miles)</h3>
+						<figure><img src="images/icons/a.png" alt="Truck" width="59" height="59"></figure>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipisc in elit, sed diam non ummy nibh in euismod tincidunt ut liber tempor laoreet. Noun set adipisc in elit, sed diam non ummy nibh in euismod tincidunt.</p>
+					</div>
+					<div>
+						<h3>Free gift wrap!</h3>
+						<figure><img src="images/icons/b.png" alt="Gift" width="59" height="59"></figure>
+						<p>Sed diam non ummy nibh in euismod tincidunt ut liber tempor laoreet.Lorem ipsum dolor sit amet, consectetuer adipisc in elit, samo em ipsum dolor sit amet, consectetuer adipisc in elit.</p>
+					</div>
+				</article>
+				<article id="info">
+					<div class="vcard">
+						<h3>Contact info:</h3>
+						<h4 class="fn org">Just the best CAKES</h4>
+						<p class="tel">9876.543.210</p>
+						<p><a class="email">info//loremipsum/com</a></p>
+						<p class="adr"><span class="locality">London</span>, <span class="street-address">Street 28/A</span></p>
+					</div>
+					<div>
+						<h3>Work time:</h3>
+						<ul>
+							<li>Monday - Friday: 8 AM - 8 PM</li>
+							<li>Saturday: 9 AM - 4 PM</li>
+							<li>Sunday: closed :(</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Become our friend:</h3>
+						<ul class="social-a">
+							<li class="fb"><a rel="external" href="index.html">follow us on Facebook</a></li>
+							<li class="tw"><a rel="external" href="index.html">follow us on Twitter</a></li>
+							<li class="gp"><a rel="external" href="index.html">follow us on Google</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Blog - our secret recipes:</h3>
+						<ul class="list-a">
+							<li><a href="index.html">Cake with chocolate &amp; strawberries</a></li>
+							<li><a href="index.html">Simple vanilla cake</a></li>
+							<li><a href="index.html">Unusual dark pancakes</a></li>
+						</ul>
+					</div>
+				</article>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="index.html">Our cakes</a></li>
+						<li><a href="index.html">Price</a></li>
+						<li><a href="index.html">Blog</a></li>
+						<li><a href="index.html">Contact</a></li>
+					</ul>
+					<p>copyright: <a href="index.html">yourcompanyname.com</a> <span class="date">2012</span></p>
+				</nav>
+			</footer>
+		</div>
+		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;language=en"></script>
+		<script type="text/javascript">
+			head.js('../../../../../ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js','javascript/scripts.js','javascript/mobile.js')
+		</script>
+	</body>
+
+<!-- Mirrored from templatation.net/site-templates/justcakes/version4/layout4/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 09:31:50 GMT -->
+</html>

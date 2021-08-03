@@ -1,0 +1,240 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	
+<!-- Mirrored from templatation.net/site-templates/justcakes/version4/layout4/product.html' %} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 09:31:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+		<title>Product - Just the best Cakes</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width">
+		<script type="text/javascript" src="{% static 'javascript/head.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/screen.css' %}" media="screen">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/print.css' %}" media="print">
+		<link rel="shortcut icon" href="{% static 'favicon.ico" type="image/x-icon">
+
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+<script type="text/javascript" src="{% static 'jscript_styleswitcher.js' %}"></script>
+<link rel="stylesheet" href="{% static 'styleswitcher.css' %}" />
+
+<!-- Skins Color FOR DEMO WEBSITE -->
+<link rel="alternate stylesheet" href="{% static 'styles-orange/screen.css' %}" title="style-orange" />
+<link rel="alternate stylesheet" href="{% static 'styles-blue/screen.css' %}" title="style-blue" />
+<link rel="alternate stylesheet" href="{% static 'styles-pink/screen.css' %}" title="style-pink" />
+<link rel="alternate stylesheet" href="{% static 'styles-purple/screen.css' %}" title="style-purple" />
+<link rel="alternate stylesheet" href="{% static 'styles-green/screen.css' %}" title="style-green" />
+<!-- EOF OF DEMO WEBSITE CODE -->
+<!-------------------------------------------------------------------/
+EOF Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+
+	</head>
+	<body>
+<!-------------------------------------------------------------------/
+Color switcher for demo, to be removed from live website.
+<!------------------------------------------------------------------->	
+	   
+<div class="switcher" style="left: -130px;">	<h2>Colors<a href="{% static '.#' %}"></a></h2>
+<div class="switcher-content"> 
+<div class="switcher-box">
+            <a title="style-blue" class="styleswitch blue" rel="style-blue"></a>
+            <a title="style-pink" class="styleswitch pink" rel="style-pink"></a>
+            <a title="style-purple" class="styleswitch purple" rel="style-purple"></a>
+            <a title="style-green" class="styleswitch green" rel="style-green"></a>
+            <a title="style-orange" class="styleswitch orange" rel="style-orange"></a>
+		</div><!-- End switcher-box -->
+        <div class="clear"></div>
+        <!-- cols -->
+        <ul class="cols">
+        	<li><a href="{% static 'http://templatation.com/Site-templates/Justcakes/version4/layout1/" class="boxed-layout">Layout 1</a></li>
+        	<li><a href="{% static 'http://templatation.com/Site-templates/Justcakes/version4/layout2/" class="boxed-layout">Layout 2</a></li>
+        	<li><a href="{% static 'http://templatation.com/Site-templates/Justcakes/version4/layout3/" class="boxed-layout">Layout 3</a></li>
+        	<li><a href="{% static 'http://templatation.com/Site-templates/Justcakes/version4/layout4/" class="boxed-layout">Layout 4</a></li>
+        </ul>
+
+    </div><!-- End content -->
+</div>
+<!-------------------------------------------------------------------/
+Color switcher ends here
+<!------------------------------------------------------------------->		   
+		<div id="root">
+			<!-- Header start -->
+			<header id="top" class="c">
+				<h1><a href="{% url 'index' %}" accesskey="h">Just the best Cakes</a></h1>
+				
+				<!-- Navigation start -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						
+						
+						</li>
+						{% if user.is_authenticated %}
+						<li><a accesskey="3" href="{% url 'index' %}">{{ user.username }}&nbsp hi</a> <em>(3)</em></li>
+						<li><a href="/logout">logout </a>
+						{% else %}
+			<li><a accesskey="3" href="/register">register</a> <em>(3)</em></li>
+			
+			<li><a accesskey="5" href="/login">login</a> <em>(5)</em>
+				{% endif %}
+							
+						</li>
+						<li><a accesskey="6" href="{% url 'cnt' %}">Contact</a> <em>(6)</em></li>
+					</ul>
+				</nav>
+				<div id="featured">
+					<div><figure><img src="{% static 'temp/placeholder-o.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o-1.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+					<div><figure><img src="{% static 'temp/placeholder-o-1.png' %}" alt="Placeholder" width="2000" height="460"></figure> <div><h2>Do you like our cakes?</h2> <p>Lorem ipsum dolor sit amet, consectetueommodo cequat. </p></div></div>
+				</div>
+			</header>  
+			
+			</nav>                  
+			<!-- Content area start -->
+			<section id="content">
+				<div class="cols-a">
+					<article>
+							
+						<!--<div class="product-a">
+							<div>
+								<h3>Little fruit cupcake</h3>
+								<p>Lorem ipsum dolor sit amet, consect etuer adipisc in elit, sed diam nonum my nibh in euismod tincidunt. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in.</p>
+								<p class="price-a">Price: 1,25</p>
+								<form action="https://templatation.net/site-templates/justcakes/version4/layout4/" method="post" class="form-c">
+									<fieldset>
+										<legend>Buy form</legend>
+										<p>
+											<label for="fca">Choose amount</label>
+											<input type="text" id="fca" name="fca" required>
+											<button type="submit">Buy now</button>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+							<aside>
+								<figure>
+									<img src="{% static 'temp/placeholder-k.png' %}" alt="Placeholder" width="280" height="180">
+									<img src="{% static 'temp/placeholder-k-1.png' %}" alt="Placeholder" width="280" height="180">
+									<img src="{% static 'temp/placeholder-k.png' %}" alt="Placeholder" width="280" height="180">
+									<img src="{% static 'temp/placeholder-k-1.png' %}" alt="Placeholder" width="280" height="180">
+								</figure>
+							</aside>
+						</div>
+						<div class="tabs-a">
+							<ul>
+								<li>Description</li>
+								<li>Informations</li>
+								<li>Comments</li>
+							</ul>
+						    <div>
+								<div>
+									<p>Lorem ipsum dolor sit amet, consect etuer adipisc in elit, sed diam nonum my nibh in euismod tincidunt. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+								</div>
+								<div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et blandit leo. Duis quis nisi eu risus egestas viverra vitae sit amet felis. In eget imperdiet ipsum. In tellus nulla, pharetra vel consequat non, sodales eget sapien. Vivamus aliquet vehicula mauris vitae sagittis. Sed quis quam eros, eget varius nisl. Cras imperdiet accumsan mi in congue. In erat velit, gravida ut tristique ac, imperdiet sed tellus. Fusce at nisi nulla. Praesent at imperdiet elit. Donec quis tortor nisl, vel semper lorem. Vivamus id arcu urna. Suspendisse mi turpis, fringilla tincidunt bibendum non, viverra ac libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at sapien sit amet magna tincidunt posuere id iaculis neque. </p>
+								</div>
+								<div>
+									<p>Curabitur mauris libero, auctor id vulputate vel, lobortis at ipsum. Praesent cursus risus quis leo sodales dapibus. In ornare metus eget justo facilisis cursus. Morbi mi arcu, egestas non ultricies eget, fringilla a ligula. Proin sed pulvinar nibh. Phasellus venenatis blandit ornare. Quisque congue ligula a sapien scelerisque vel pretium mi cursus. Morbi et bibendum diam. Duis at tellus lorem, eget bibendum mauris. </p>
+								</div>
+							</div>       
+						</div>-->>
+						<h3>Our products:</h3>
+						
+						<div class="news-c">
+							{% for i in products %}
+							<article width="280" height="380">
+								<figure><img src="{{ i.image.url }}" alt="Placeholder" width="280" height="180"></figure>
+								<h3>{{i.name}}</h3>
+								<p>{{i.desc}}</p>
+								<p class="price">{{i.price}}</p>
+								<p class="link-b"><a href="{% static 'index.html' %}">{{i.category}}</a></p>
+								<form action="{% url 'checkout' %}" method="post">
+									{% csrf_token %}
+									<input type="hidden" value="{{i.id}}" name="pid"/>
+									<input type="hidden" value="1" name="qty"/>
+									<p class="caption-more"> <button type="submit" class="btn btn-theme">Add-cart</p>
+										
+								</form>
+							</article>
+							{% endfor %}
+						</div>
+						
+					</article>
+				
+				</div>
+			</section>
+			<!-- Content area end -->
+			<!-- Footer starts -->
+			<footer id="footer">
+				<article class="double-a">
+					<div>
+						<h3>Free delivery! (30 minutes)</h3>
+						<figure><img src="{% static 'images/icons/a.png' %}" alt="Truck" width="59" height="59"></figure>
+						<p>'Just the best CAKES' is happy to assist you with your home delivery. Every time you order, you get a hot/cold and fresh product delivered at your doorstep in less than thirty minutes.</p>
+					</div>
+					<div>
+						<h3>Free gift wrap!</h3>
+						<figure><img src="{% static 'images/icons/b.png' %}" alt="Gift" width="59" height="59"></figure>
+						<p>Free Gift Wrap on all items by select sellers too when Fulfilled by 'Just the best CAKES'. See how to have your item gift wrapped free of charge and the Terms & Conditions of the offer.</p>
+					</div>
+				</article>
+				<article id="info">
+					<div class="vcard">
+						<h3>Contact info:</h3>
+						<h4 class="fn org">Just the best CAKES</h4>
+						<p class="tel">+91 8188929736</p>
+						<p><a class="email">siddharthapandey548@gmail.com</a></p>
+						<p class="adr"><span class="locality">Lucknow</span>, <span class="street-address">Kaiserbagh</span></p>
+					</div>
+					<div>
+						<h3>Work time:</h3>
+						<ul>
+							<li>Monday - Friday: 8 AM - 8 PM</li>
+							<li>Saturday: 9 AM - 4 PM</li>
+							<li>Sunday: closed :(</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Become our friend:</h3>
+						<ul class="social-a">
+							<li class="fb"><a rel="external" href="{% static 'index.html' %}">follow us on Facebook</a></li>
+							<li class="tw"><a rel="external" href="{% static 'index.html' %}">follow us on Twitter</a></li>
+							<li class="gp"><a rel="external" href="{% static 'index.html' %}">follow us on Google</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Blog - our secret recipes:</h3>
+						<ul class="list-a">
+							<li><a href="{% static 'index.html' %}">Cake with chocolate &amp; strawberries</a></li>
+							<li><a href="{% static 'index.html' %}">Simple vanilla cake</a></li>
+							<li><a href="{% static 'index.html' %}">Unusual dark pancakes</a></li>
+						</ul>
+					</div>
+				</article>
+				<nav>
+					<ul>
+						<li><a href="{% static 'index.html' %}">Home</a></li>
+						<li><a href="{% static 'index.html' %}">About</a></li>
+						<li><a href="{% static 'index.html' %}">Our cakes</a></li>
+						<li><a href="{% static 'index.html' %}">Price</a></li>
+						<li><a href="{% static 'index.html' %}">Blog</a></li>
+						<li><a href="{% static 'index.html' %}">Contact</a></li>
+					</ul>
+					<p>copyright: <a href="{% static 'index.html' %}">yourcompanyname.com</a> <span class="date">2012</span></p>
+				</nav>
+			</footer>
+		</div>
+		<script src="ttp://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;language=en"></script>
+		<script type="text/javascript">
+			head.js('../../../../../ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js,javascript/scripts.js','javascript/mobile.js')
+		</script>
+	</body>
+
+</html>
